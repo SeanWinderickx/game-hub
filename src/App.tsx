@@ -1,5 +1,6 @@
 import { Grid, GridItem, Show, useBreakpointValue } from "@chakra-ui/react";
 import NavBar from "./components/navbar";
+import ColorModeSwitch from "./components/ColorModeSwitch";
 
 function App() {
   return (
@@ -13,13 +14,9 @@ function App() {
         <NavBar />
       </GridItem>
       <Show when={useBreakpointValue({ base: false, lg: true })}>
-        <GridItem area="aside" bg="gold">
-          Aside
-        </GridItem>
+        <GridItem area="aside">Aside</GridItem>
       </Show>
-      <GridItem area="main" bg="dodgerblue">
-        Main
-      </GridItem>
+      <GridItem area="main">Main</GridItem>
     </Grid>
   );
 }
